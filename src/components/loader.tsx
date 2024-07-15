@@ -4,12 +4,7 @@ function Loader() {
       <div className="cube-loader">
         <div className="cube-top"></div>
         <div className="cube-wrapper">
-          <span
-            className="cube-span"
-            style={{
-              "--i": 0,
-            }}
-          >
+          <span className="cube-span cube-span--1">
             <div
               style={{
                 textAlign: "center",
@@ -20,12 +15,7 @@ function Loader() {
               🍕
             </div>
           </span>
-          <span
-            className="cube-span"
-            style={{
-              "--i": 1,
-            }}
-          >
+          <span className="cube-span cube-span--2">
             <div
               style={{
                 textAlign: "center",
@@ -36,12 +26,7 @@ function Loader() {
               🍕
             </div>
           </span>
-          <span
-            className="cube-span"
-            style={{
-              "--i": 2,
-            }}
-          >
+          <span className="cube-span cube-span--3">
             <div
               style={{
                 textAlign: "center",
@@ -52,12 +37,7 @@ function Loader() {
               🍕
             </div>
           </span>
-          <span
-            className="cube-span"
-            style={{
-              "--i": 3,
-            }}
-          >
+          <span className="cube-span cube-span--4">
             <div
               style={{
                 textAlign: "center",
