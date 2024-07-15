@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 20 14.3% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+    --primary: 38 100% 58%;
+    --primary-foreground: 60 9.1% 97.8%;
+    --secondary: 60 4.8% 95.9%;
+    --secondary-foreground: 24 9.8% 10%;
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+    --accent: 60 4.8% 95.9%;
+    --accent-foreground: 24 9.8% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 24.6 95% 53.1%;
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --foreground: 60 9.1% 97.8%;
+    --card: 20 14.3% 4.1%;
+    --card-foreground: 60 9.1% 97.8%;
+    --popover: 20 14.3% 4.1%;
+    --popover-foreground: 60 9.1% 97.8%;
+    --primary: 20.5 90.2% 48.2%;
+    --primary-foreground: 60 9.1% 97.8%;
+    --secondary: 12 6.5% 15.1%;
+    --secondary-foreground: 60 9.1% 97.8%;
+    --muted: 12 6.5% 15.1%;
+    --muted-foreground: 24 5.4% 63.9%;
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 60 9.1% 97.8%;
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 12 6.5% 15.1%;
+    --input: 12 6.5% 15.1%;
+    --ring: 20.5 90.2% 48.2%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1 {
+    @apply scroll-m-20 mb-4 lg:max-w-[550px] md:max-w-[650px] text-5xl text-center font-extrabold tracking-tight lg:text-7xl md:text-left;
+  }
+  h2 {
+    @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
+  }
+  h3 {
+    @apply scroll-m-20 text-2xl font-semibold tracking-tight;
+  }
+  p {
+    @apply leading-7 [&:not(:first-child)]:mt-2;
+  }
+}
+
+.cube-loader {
+  position: relative;
+  /* u can choose any size */
+  width: 75px;
+  height: 75px;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg);
+  animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotateX(-30deg) rotateY(0);
+  }
+
+  100% {
+    transform: rotateX(-30deg) rotateY(360deg);
+  }
+}
+
+.cube-loader .cube-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* top: 0;
+  left: 0; */
+  transform-style: preserve-3d;
+}
+
+.cube-loader .cube-wrapper .cube-span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* top: 0;
+  left: 0; */
+  /* width 75px / 2 = 37.5px */
+  transform: rotateY(calc(90deg * var(--i))) translateZ(37.5px);
+  background: hsla(0, 100%, 95%, 1);
+  background: linear-gradient(
+    90deg,
+    hsla(0, 100%, 95%, 1) 1%,
+    hsla(27, 100%, 85%, 1) 99%
+  );
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(0, 100%, 95%, 1) 1%,
+    hsla(27, 100%, 85%, 1) 99%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(0, 100%, 95%, 1) 1%,
+    hsla(27, 100%, 85%, 1) 99%
+  );
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#ffe3e3", endColorstr="#ffd5b2", GradientType=1 );
+}
+
+.cube-top {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  background: hsla(0, 100%, 95%, 1);
+  background: linear-gradient(
+    90deg,
+    hsla(0, 100%, 95%, 1) 1%,
+    hsla(27, 100%, 85%, 1) 99%
+  );
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(0, 100%, 95%, 1) 1%,
+    hsla(27, 100%, 85%, 1) 99%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(0, 100%, 95%, 1) 1%,
+    hsla(27, 100%, 85%, 1) 99%
+  );
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#ffe3e3", endColorstr="#ffd5b2", GradientType=1 );
+  /* width 75px / 2 = 37.5px */
+  transform: rotateX(90deg) translateZ(37.5px);
+  transform-style: preserve-3d;
+}
+
+.cube-top::before {
+  content: "";
+  position: absolute;
+  /* u can choose any size */
+  width: 75px;
+  height: 75px;
+  background: hsla(0, 100%, 95%, 1);
+  background: linear-gradient(
+    90deg,
+    hsla(0, 100%, 95%, 1) 1%,
+    hsla(27, 100%, 85%, 1) 99%
+  );
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(0, 100%, 95%, 1) 1%,
+    hsla(27, 100%, 85%, 1) 99%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(0, 100%, 95%, 1) 1%,
+    hsla(27, 100%, 85%, 1) 99%
+  );
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#ffe3e3", endColorstr="#ffd5b2", GradientType=1 );
+  background: linear-gradient(
+    90deg,
+    hsla(0, 100%, 95%, 1) 1%,
+    hsla(27, 100%, 85%, 1) 99%
+  );
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(0, 100%, 95%, 1) 1%,
+    hsla(27, 100%, 85%, 1) 99%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(0, 100%, 95%, 1) 1%,
+    hsla(27, 100%, 85%, 1) 99%
+  );
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#ffe3e3", endColorstr="#ffd5b2", GradientType=1 );
+  transform: translateZ(-90px);
+  filter: blur(10px);
+  box-shadow: 0 0 10px #323232, 0 0 20px hsl(176.61, 42.28%, 40.7%) 19.6%,
+    0 0 30px #323232, 0 0 40px hsl(176.61, 42.28%, 40.7%) 19.6%;
+}
