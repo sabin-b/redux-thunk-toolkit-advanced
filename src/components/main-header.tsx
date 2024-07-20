@@ -1,4 +1,4 @@
-import { SearchBox } from "@/components/command-menu";
+import { SearchBox } from "@/components/searchbox";
 import { MainNav } from "@/components/main-nav";
 import { MobileNav } from "@/components/mobile-nav";
 // import { ModeToggle } from "@/components/mode-toggle";

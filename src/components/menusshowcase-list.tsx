@@ -19,9 +19,9 @@ function MenusshowCaseList() {
         ))}
       </div>
       <div className="mt-16">
-        <Button asChild size={"lg"} className="text-xl py-7 rounded-sm">
+        <Button asChild size={"lg"} className="text-lg py-6 rounded-sm">
           <Link to="/menu">
-            <ChevronRight /> View All Menu
+            <ChevronRight /> Order Now
           </Link>
         </Button>
       </div>

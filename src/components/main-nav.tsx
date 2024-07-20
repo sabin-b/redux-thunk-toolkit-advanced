@@ -38,10 +38,10 @@ export function MainNav() {
           Orders
         </Link>
         <Link
-          to="/orders/new"
+          to="/order/new"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname === "/orders/new" ? "text-primary" : "text-foreground/70"
+            pathname === "/order/new" ? "text-primary" : "text-foreground/70"
           )}
         >
           New Order

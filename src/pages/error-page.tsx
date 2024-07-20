@@ -6,7 +6,7 @@ import { useNavigate, useRouteError } from "react-router-dom";
 function Errorpage() {
   const navigate = useNavigate();
   const routerError = useRouteError();
-  console.log(routerError);
+  // console.log(routerError);
   const { data } = routerError as { data: string };
   return (
     <div className="h-full flex flex-col md:min-h-screen">

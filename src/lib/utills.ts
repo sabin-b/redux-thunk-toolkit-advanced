@@ -9,6 +9,7 @@ export function cn(...inputs: ClassValue[]) {
 /*** react query keys */
 export const queryKeys = {
   allMenus: "Menus",
+  singleOrder: "singleOrder",
 };
 
 /** MaindishShowcase data */
