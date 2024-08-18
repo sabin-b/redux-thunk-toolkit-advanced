@@ -3,8 +3,10 @@ import { Dialog } from "./ui/dialog";
 
 export function CartPopup() {
   return (
-    <Dialog defaultOpen open modal={false}>
-      <NameInputDialog />
-    </Dialog>
+    <div className="min-h-screen">
+      <Dialog defaultOpen open modal={false}>
+        <NameInputDialog />
+      </Dialog>
+    </div>
   );
 }
