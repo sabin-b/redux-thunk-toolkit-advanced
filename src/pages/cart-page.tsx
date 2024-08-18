@@ -102,21 +102,23 @@ export function CartItem({
   const dispatch = useDispatch();
   return (
     <Card className="p-4">
-      <div className="flex flex-row items-center gap-4">
+      <div className="flex flex-col  md:flex-row items-center gap-4">
         <img
           src={imageUrl}
           alt={name}
           className="rounded-md object-cover w-36 h-36 md:w-28 md:h-28"
         />
         <div className="flex-1 grid gap-2 md:gap-1">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between">
-            <h3 className="font-semibold text-lg">{name}</h3>
-            <p className="text-primary font-semibold flex gap-2">
+          <div className="flex flex-col sm:flex-row md:items-start items-center justify-between">
+            <h3 className="font-semibold text-center md:text-left text-lg">
+              {name}
+            </h3>
+            <p className="text-primary text-center md:text-left  font-semibold flex gap-2">
               <span>{formatCurrency(unitPrice)}</span>*<span>{quantity}</span>=
               <span>{formatCurrency(totalPrice)}</span>
             </p>
           </div>
-          <p className="text-muted-foreground truncate  mb-2 text-left text-sm">
+          <p className="text-muted-foreground text-center md:text-left truncate  mb-2 text-sm">
             {ingredients?.join(",").toString()}
           </p>
           <div className="flex items-center gap-2">
