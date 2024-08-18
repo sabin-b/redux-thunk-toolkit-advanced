@@ -26,7 +26,7 @@ export function MainNav() {
         >
           Menu
         </Link>
-        <Link
+        {/* <Link
           to="/orders"
           className={cn(
             "transition-colors hover:text-foreground/80",
@@ -36,8 +36,8 @@ export function MainNav() {
           )}
         >
           Orders
-        </Link>
-        <Link
+        </Link> */}
+        {/* <Link
           to="/order/new"
           className={cn(
             "transition-colors hover:text-foreground/80",
@@ -45,7 +45,7 @@ export function MainNav() {
           )}
         >
           New Order
-        </Link>
+        </Link> */}
         <Link
           to="/cart"
           className={cn(

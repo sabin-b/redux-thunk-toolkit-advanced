@@ -6,7 +6,6 @@ const Cart = lazy(() => import("./pages/cart-page"));
 const Home = lazy(() => import("./pages/home-page"));
 const Menus = lazy(() => import("./pages/menus-page"));
 const NewOrder = lazy(() => import("./pages/neworder-page"));
-const Orders = lazy(() => import("./pages/orders-page"));
 const OrderSingle = lazy(() => import("./pages/singleorder-page"));
 const AppLayout = lazy(() => import("./components/app-layout"));
 const ErrorPage = lazy(() => import("./pages/error-page"));
@@ -33,10 +32,6 @@ const router = createBrowserRouter([
       {
         path: "/order/new",
         element: <NewOrder />,
-      },
-      {
-        path: "/orders",
-        element: <Orders />,
       },
       {
         path: "/order/:orderId",

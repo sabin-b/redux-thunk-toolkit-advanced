@@ -49,15 +49,27 @@ export function MobileNav() {
         </Button>
       </SheetTrigger>
       <SheetContent side="left" className="pr-0">
-        <MobileLink to="/" className="flex text-2xl items-center" onOpenChange={setOpen}>
+        <MobileLink to="/" className="flex text-2xl items-center">
           <span>🍕</span>
-          <span className="font-bold">
-            {siteConfig.name}
-          </span>
+          <span className="font-bold">{siteConfig.name}</span>
         </MobileLink>
         <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
-          <div className="flex flex-col space-y-3"></div>
-          <div className="flex flex-col space-y-2"></div>
+          <div className="flex flex-col space-y-3">
+            <MobileLink
+              to="/menu"
+              className="flex text-lg font-medium items-center"
+            >
+              Menus
+            </MobileLink>
+          </div>
+          <div className="flex flex-col space-y-2">
+            <MobileLink
+              to="/cart"
+              className="flex text-lg font-medium items-center"
+            >
+              Cart
+            </MobileLink>
+          </div>
         </ScrollArea>
       </SheetContent>
     </Sheet>
@@ -66,22 +78,13 @@ export function MobileNav() {
 
 interface MobileLinkProps {
   to: string;
-  onOpenChange?: (open: boolean) => void;
   children: React.ReactNode;
   className?: string;
 }
 
 function MobileLink({ to, className, children }: MobileLinkProps) {
-  //   const router = useRouter();
   return (
-    <Link
-      to={to}
-      //   onClick={() => {
-      //     router.push(href.toString());
-      //     onOpenChange?.(false);
-      //   }}
-      className={cn(className)}
-    >
+    <Link to={to} className={cn(className)}>
       {children}
     </Link>
   );

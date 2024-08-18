@@ -9,7 +9,7 @@ export const Footer = () => {
     <footer className="dark:bg-background">
       <div className="mt-8 py-6 border-t container max-w-screen-2xl items-center justify-between sm:flex">
         <div className="mt-4 sm:mt-0">
-          &copy; {currentYear} React Pizza All rights reserved.
+          &copy; {currentYear} React Pizza All rights reserved. | by <span className="text-primary">sabin</span>
         </div>
         <div className="mt-6 sm:mt-0">
           <ul className="flex items-center space-x-4">

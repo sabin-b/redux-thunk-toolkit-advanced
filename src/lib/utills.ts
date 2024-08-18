@@ -133,3 +133,50 @@ export const demoMenusList: demoMenusList[] = [
       "https://res.cloudinary.com/sabindev/image/upload/v1721001992/react%20pizza/freshly-baked-pizza-PSP7YXK-min_dnjcu7.jpg",
   },
 ];
+
+export const demoOrderList = [
+  {
+    id: nanoid(),
+    name: "Margherita Pizza",
+    quantity: 2,
+    unitPrice: 12.99,
+    totalPrice: 25.98,
+  },
+  {
+    id: nanoid(),
+    name: "Pepperoni Pizza",
+    quantity: 1,
+    unitPrice: 14.99,
+    totalPrice: 14.99,
+  },
+  {
+    id: nanoid(),
+    name: "Hawaiian Pizza",
+    quantity: 3,
+    unitPrice: 11.99,
+    totalPrice: 35.97,
+  },
+];
+
+/** format currency */
+export function formatCurrency(amount: number) {
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  }).format(amount);
+}
+
+export function formatDate(dateStr: string) {
+  return new Intl.DateTimeFormat("en", {
+    day: "numeric",
+    month: "short",
+    hour: "2-digit",
+    minute: "2-digit",
+  }).format(new Date(dateStr));
+}
+
+export function calcMinutesLeft(dateStr: string) {
+  const d1 = new Date().getTime();
+  const d2 = new Date(dateStr).getTime();
+  return Math.round((d2 - d1) / 60000);
+}
